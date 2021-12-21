@@ -7,10 +7,14 @@
     background:linear-gradient(transparent,  rgba(89, 0, 255, 0.068));
 
     .sidebar-container{
-        padding: 20px;
+        height: 100%;
+        overflow-y: scroll;
+        color: grey;
+        padding-inline: 20px;
             .menu-section-title{
                 color: grey;
-                padding: 10px;
+                padding-top: 20px;
+                display: flex;
             }
     }
 }
