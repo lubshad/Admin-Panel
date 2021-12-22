@@ -3,6 +3,8 @@ import React from 'react'
 import Chart from '../../components/chart/Chart'
 import { DefaultSpacerHorizontal, DefaultSpacerVertical } from '../../components/default_spacer/DefaultSpacer'
 import FeaturedInfo from '../../components/featured_info/FeaturedInfo'
+import LatestTransactions from './components/latest_transactions/LatestTransactions'
+import NewMembers from './components/new_members/NewMembers'
 import "./home.scss"
 
 export default function Home() {
@@ -47,7 +49,11 @@ export default function Home() {
                 </div>
                 <Chart dataKey={"month"} data={data} title={"User Analytics"}></Chart>
                 <DefaultSpacerVertical></DefaultSpacerVertical>
-                <Chart dataKey={"month"} data={data} title={"User Analytics"}></Chart>
+                <div className="members-and-transactions">
+                    <NewMembers></NewMembers>
+                    <DefaultSpacerHorizontal></DefaultSpacerHorizontal>
+                    <LatestTransactions></LatestTransactions>
+                </div>
                 <DefaultSpacerVertical></DefaultSpacerVertical>
                 <DefaultSpacerVertical></DefaultSpacerVertical>
                 <DefaultSpacerVertical></DefaultSpacerVertical>

@@ -1,15 +1,17 @@
-.chart{
+.new-members{
     border-radius: 10px;
-    width: 100%;
+    flex: 1;
     box-shadow: var(--box-shadow);
     -webkit-box-shadow: var(--web-kit-box-shadow);
     -moz-box-shadow: var(--moz-box-shadow);
-    
-    .chart-container{
+
+    .new-members-container{
         padding: 20px;
 
-        .chart-title{
+
+        .title{
             padding-block: 20px;
         }
+
     }
 }

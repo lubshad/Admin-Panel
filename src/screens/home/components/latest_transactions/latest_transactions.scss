@@ -1,15 +1,8 @@
-.chart{
+.latest-transactions{
+    height: 100%;
     border-radius: 10px;
-    width: 100%;
+    flex: 2;
     box-shadow: var(--box-shadow);
     -webkit-box-shadow: var(--web-kit-box-shadow);
     -moz-box-shadow: var(--moz-box-shadow);
-    
-    .chart-container{
-        padding: 20px;
-
-        .chart-title{
-            padding-block: 20px;
-        }
-    }
 }
