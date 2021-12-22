@@ -4,7 +4,7 @@ import "./featured_info.scss"
 import { ArrowDownward, ArrowUpward } from '@mui/icons-material'
 import { DefaultSpacerHorizontal } from '../default_spacer/DefaultSpacer'
 
-export default function FeaturedInfo({title, value, statistics}) {
+export default function FeaturedInfo({ title, value, statistics }) {
 
 
     const Indicator = statistics[0] == "+" ? ArrowUpward : ArrowDownward
