@@ -1,0 +1,13 @@
+.home{
+    width: 100%;
+    height: 100%;
+    
+    .home-container{
+        padding: 20px;
+
+        .featured-info-section{
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+}
