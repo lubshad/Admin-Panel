@@ -41,23 +41,21 @@ export default function Home() {
 
     return (
         <div className="home">
-            <div className="home-container">
-                <div className="featured-info-section">
-                    <FeaturedInfo title={"Revenue"} value={"$2050"} statistics={"-20"} ></FeaturedInfo>
-                    <FeaturedInfo title={"Sales"} value={"$3500"} statistics={"+25"}></FeaturedInfo>
-                    <FeaturedInfo title={"Cost"} value={"$2030"} statistics={"-15"}></FeaturedInfo>
-                </div>
-                <Chart dataKey={"month"} data={data} title={"User Analytics"}></Chart>
-                <DefaultSpacerVertical></DefaultSpacerVertical>
-                <div className="members-and-transactions">
-                    <NewMembers></NewMembers>
-                    <DefaultSpacerHorizontal></DefaultSpacerHorizontal>
-                    <LatestTransactions></LatestTransactions>
-                </div>
-                <DefaultSpacerVertical></DefaultSpacerVertical>
-                <DefaultSpacerVertical></DefaultSpacerVertical>
-                <DefaultSpacerVertical></DefaultSpacerVertical>
+            <div className="featured-info-section">
+                <FeaturedInfo title={"Revenue"} value={"$2050"} statistics={"-20"} ></FeaturedInfo>
+                <FeaturedInfo title={"Sales"} value={"$3500"} statistics={"+25"}></FeaturedInfo>
+                <FeaturedInfo title={"Cost"} value={"$2030"} statistics={"-15"}></FeaturedInfo>
             </div>
+            <Chart dataKey={"month"} data={data} title={"User Analytics"}></Chart>
+            <DefaultSpacerVertical></DefaultSpacerVertical>
+            <div className="members-and-transactions">
+                <NewMembers></NewMembers>
+                <DefaultSpacerHorizontal></DefaultSpacerHorizontal>
+                <LatestTransactions></LatestTransactions>
+            </div>
+            <DefaultSpacerVertical></DefaultSpacerVertical>
+            <DefaultSpacerVertical></DefaultSpacerVertical>
+            <DefaultSpacerVertical></DefaultSpacerVertical>
         </div>
     )
 }

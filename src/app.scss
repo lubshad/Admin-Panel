@@ -15,11 +15,10 @@
         flex: 1;
     }
 
-    .menu-details{
-        flex: 5;
+    .route-section{
         width: 100%;
-        background-color: red;
         height: 100%;
+        overflow: scroll;
     }
 }
 
