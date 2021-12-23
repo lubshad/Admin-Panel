@@ -15,23 +15,23 @@ export default function Home() {
         },
         {
             month: "Feb",
-            users: 200,
-        },
-        {
-            month: "Mar",
             users: 300,
         },
         {
+            month: "Mar",
+            users: 200,
+        },
+        {
             month: "Apr",
-            users: 400,
+            users: 150,
         },
         {
             month: "May",
-            users: 500,
+            users: 600,
         },
         {
             month: "Jun",
-            users: 600,
+            users: 720,
         },
         {
             month: "July",
