@@ -1,51 +1,78 @@
 import React from 'react'
 import { DataGrid } from '@mui/x-data-grid';
 import "./users.scss"
+import { Delete } from '@mui/icons-material';
+
+import { useState } from 'react';
 
 export default function Users() {
 
-    const columns = [
-        { field: 'id', headerName: 'ID', width: 70 },
-        { field: 'firstName', headerName: 'First name', width: 130 },
-        { field: 'lastName', headerName: 'Last name', width: 130 },
-        {
-          field: 'age',
-          headerName: 'Age',
-          type: 'number',
-          width: 90,
-        },
-        {
-          field: 'fullName',
-          headerName: 'Full name',
-          description: 'This column has a value getter and is not sortable.',
-          sortable: false,
-          width: 160,
-          valueGetter: (params) =>
-            `${params.getValue(params.id, 'firstName') || ''} ${
-              params.getValue(params.id, 'lastName') || ''
-            }`,
-        },
-      ];
 
-      const rows = [
-        { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 },
-        { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
-        { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 45 },
-        { id: 4, lastName: 'Stark', firstName: 'Arya', age: 16 },
-        { id: 5, lastName: 'Targaryen', firstName: 'Daenerys', age: null },
-        { id: 6, lastName: 'Melisandre', firstName: null, age: 150 },
-        { id: 7, lastName: 'Clifford', firstName: 'Ferrara', age: 44 },
-        { id: 8, lastName: 'Frances', firstName: 'Rossini', age: 36 },
-        { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
-      ];
+    var rows = [];
+
+    for (let i = 0; i < 25; i++) {
+        rows.push({ id: i, username: 'john', profile: "https://images.unsplash.com/photo-1552374196-c4e7ffc6e126?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80", email: 'Jondoe@gmail.com', status: "active", action: "edit", transaction: "$200", })
+    }
+
+
+    const [data, setdata] = useState(rows)
+
+
+    const deleteUser = (id) => {
+        const filteredItems = data.filter((item) => item.id !== id)
+        setdata(filteredItems)
+    }
+
+    const columns = [
+        { field: 'id', headerName: 'ID', width: 100 },
+        {
+            field: 'user', headerName: 'User', width: 200, renderCell: (params) => {
+                return (
+                    <div className="user-name-with-image">
+                        <img src={params.row.profile} alt="" className="profile-pick" />
+                        <span>{params.row.username}</span>
+                    </div>
+                )
+            }
+        },
+        { field: 'email', headerName: 'Email', width: 200 },
+        {
+            field: 'status',
+            headerName: 'Status',
+            width: 150,
+        },
+        {
+            field: 'transaction',
+            headerName: 'Transaction',
+            width: 200,
+        },
+        {
+            field: 'action',
+            headerName: 'Action',
+            width: 150,
+            renderCell: (params) => {
+                return (
+                    <div className="actions">
+                        <button className="action-button">Action</button>
+                        <Delete className="action-icon" onClick={() => deleteUser(params.row.id)}></Delete>
+                    </div>
+                )
+            }
+        },
+    ];
+
+
+
+
     return (
         <div className='users-screen'>
-            <DataGrid 
-            rows={rows}
-            columns={columns}
-            pageSize={5}
-            rowsPerPageOptions={[5]}
-            checkboxSelection />
+            <DataGrid
+                disableSelectionOnClick
+                rows={data}
+                columns={columns}
+                pageSize={10}
+                // rowsPerPageOptions={[10]}
+                checkboxSelection />
         </div>
     )
 }

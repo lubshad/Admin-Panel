@@ -1,3 +1,39 @@
 .users-screen{
     height: 100%;
+
+    .user-name-with-image{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .profile-pick{
+            margin: 10px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }
+
+
+    .actions{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .action-button{
+            cursor: pointer;
+            margin-right: 10px;
+            padding-inline: 10px;
+            padding-block: 5px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(0, 128, 0, 0.281);
+        }
+        .action-icon{
+            cursor: pointer;
+            color: red;
+
+        }
+    }
 }
