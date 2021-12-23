@@ -9,6 +9,9 @@ export default function LatestTransactions() {
                     Latest Transactions
                 </h3>
                 <table className="transactions-table">
+                    <tbody>
+
+                    
                     <tr>
                         <th>Customer</th>
                         <th>Date</th>
@@ -59,6 +62,7 @@ export default function LatestTransactions() {
                             <span className="status">Approved</span>
                         </td>
                     </tr>
+                    </tbody>
                 </table>
             </div>
         </div>

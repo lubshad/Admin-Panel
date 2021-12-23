@@ -6,22 +6,24 @@ import MenuItem from './components/MenuItem'
 import styled from 'styled-components';
 import "./sidebar.scss"
 
+const StyledLink = styled(Link)`
+text-decoration: none;
+
+&:focus, &:hover, &:visited, &:link, &:active {
+    text-decoration: none;
+}`;
+
 export default function Sidebar() {
 
 
-    const StyledLink = styled(Link)`
-        text-decoration: none;
+   
 
-        &:focus, &:hover, &:visited, &:link, &:active {
-            text-decoration: none;
-        }`;
 
-        
     return (
         <div className='sidebar'>
             <div className="sidebar-container">
                 <div className="menu-section">
-                    <caption className="menu-section-title">Dashboard</caption>
+                    <span className="menu-section-title">Dashboard</span>
                     <StyledLink to="/">
                         <MenuItem Icon={Home} name={"Home"}></MenuItem>
                     </StyledLink>
@@ -29,7 +31,7 @@ export default function Sidebar() {
                     <MenuItem Icon={GraphicEq} name={"Sales"}></MenuItem>
                 </div>
                 <div className="menu-section">
-                    <caption className="menu-section-title">Quick Menu</caption>
+                    <span className="menu-section-title">Quick Menu</span>
                     <StyledLink to="/users">
                         <MenuItem Icon={Person} name={"Users"}></MenuItem>
                     </StyledLink>
@@ -38,13 +40,13 @@ export default function Sidebar() {
                     <MenuItem Icon={Analytics} name={"Reports"}></MenuItem>
                 </div>
                 <div className="menu-section">
-                    <caption className="menu-section-title">Notifications</caption>
+                    <span className="menu-section-title">Notifications</span>
                     <MenuItem Icon={Mail} name={"Mail"}></MenuItem>
                     <MenuItem Icon={Feedback} name={"Feedback"}></MenuItem>
                     <MenuItem Icon={Message} name={"Messages"}></MenuItem>
                 </div>
                 <div className="menu-section">
-                    <caption className="menu-section-title">Staff</caption>
+                    <span className="menu-section-title">Staff</span>
                     <MenuItem Icon={Mail} name={"Manage"}></MenuItem>
                     <MenuItem Icon={Analytics} name={"Analytics"}></MenuItem>
                     <MenuItem Icon={Report} name={"Report"}></MenuItem>

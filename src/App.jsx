@@ -14,23 +14,26 @@ import Users from './screens/users/users';
 
 function App() {
   return (
+    <div>
+
       <Router className="App">
         <Topbar></Topbar>
         <div className="body">
           <Sidebar></Sidebar>
           <div className="route-section">
 
-          <Switch>
-            <Route exact path="/">
-              <Home></Home>
-            </Route>
-            <Route path="/users">
-              <Users></Users>
-            </Route>
-          </Switch>
+            <Switch>
+              <Route exact path="/">
+                <Home></Home>
+              </Route>
+              <Route path="/users">
+                <Users></Users>
+              </Route>
+            </Switch>
           </div>
         </div>
       </Router>
+    </div>
   );
 }
 

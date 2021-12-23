@@ -1,7 +1,7 @@
 import React from 'react'
 import { DataGrid } from '@mui/x-data-grid';
 import "./users.scss"
-import { Delete } from '@mui/icons-material';
+import { Delete, DeleteOutline } from '@mui/icons-material';
 
 import { useState } from 'react';
 
@@ -54,7 +54,7 @@ export default function Users() {
                 return (
                     <div className="actions">
                         <button className="action-button">Action</button>
-                        <Delete className="action-icon" onClick={() => deleteUser(params.row.id)}></Delete>
+                        <DeleteOutline className="action-icon" onClick={() => deleteUser(params.row.id)}></DeleteOutline>
                     </div>
                 )
             }
@@ -71,7 +71,7 @@ export default function Users() {
                 rows={data}
                 columns={columns}
                 pageSize={10}
-                // rowsPerPageOptions={[10]}
+                rowsPerPageOptions={[10]}
                 checkboxSelection />
         </div>
     )
