@@ -4,6 +4,7 @@ import "./users.scss"
 import { Delete, DeleteOutline } from '@mui/icons-material';
 
 import { useState } from 'react';
+import { StyledLink } from '../../components/sidebar/Sidebar';
 
 export default function Users() {
 
@@ -53,7 +54,10 @@ export default function Users() {
             renderCell: (params) => {
                 return (
                     <div className="actions">
-                        <button className="action-button">Action</button>
+                        <StyledLink to="/user">
+                            <button className="action-button">Edit</button>
+                        </StyledLink>
+
                         <DeleteOutline className="action-icon" onClick={() => deleteUser(params.row.id)}></DeleteOutline>
                     </div>
                 )

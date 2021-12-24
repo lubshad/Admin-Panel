@@ -13,7 +13,8 @@ text-decoration: none;
     text-decoration: none;
 }`;
 
-export default function Sidebar() {
+
+function Sidebar() {
 
 
    
@@ -56,3 +57,6 @@ export default function Sidebar() {
         </div>
     )
 }
+
+
+export {StyledLink, Sidebar}

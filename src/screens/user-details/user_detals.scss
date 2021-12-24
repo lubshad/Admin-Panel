@@ -1,0 +1,42 @@
+.user-details{
+    padding: 20px;
+
+    .top-section{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+        .title{
+            padding-block: 20px;
+        }
+
+        .create-button{
+
+        }
+    }
+
+    .middle-section{
+        display: flex;
+        
+        .user-details{
+            padding: 20px;
+            border-radius: 10px;
+            flex: 3;
+            height: 500px;
+            box-shadow: var(--box-shadow);
+            -webkit-box-shadow: var(--web-kit-box-shadow);
+            -moz-box-shadow: var(--moz-box-shadow);
+        }
+
+        .edit-section{
+            padding: 20px;
+            border-radius: 10px;
+            height: 500px;
+            flex: 4;
+            box-shadow: var(--box-shadow);
+            -webkit-box-shadow: var(--web-kit-box-shadow);
+            -moz-box-shadow: var(--moz-box-shadow);
+        }
+    }
+}
