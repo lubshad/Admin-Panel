@@ -12,6 +12,8 @@ import {
 } from "react-router-dom";
 import Users from './screens/users/users';
 import User from './screens/user-details/user_details';
+import UserDetails from './screens/user-details/user_details';
+import NewUser from './screens/new_user/new_user';
 
 function App() {
   return (
@@ -31,7 +33,10 @@ function App() {
                 <Users></Users>
               </Route>
               <Route path="/user">
-                <User></User>
+                <UserDetails></UserDetails>
+              </Route>
+              <Route path="/new-user">
+                <NewUser></NewUser>
               </Route>
             </Switch>
           </div>

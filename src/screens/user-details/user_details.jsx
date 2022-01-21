@@ -12,7 +12,6 @@ export default function UserDetails() {
         <div className='user-details'>
             <div className="top-section">
                 <h2 className="title">Edit User</h2>
-                <button className="create-button">Create</button>
             </div>
             <div className="middle-section">
                 <div className="user-details">

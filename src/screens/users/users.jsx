@@ -1,7 +1,9 @@
 import React from 'react'
 import { DataGrid } from '@mui/x-data-grid';
 import "./users.scss"
-import { Delete, DeleteOutline } from '@mui/icons-material';
+import { DeleteOutline } from '@mui/icons-material';
+
+import { Link } from 'react-router-dom';
 
 import { useState } from 'react';
 import { StyledLink } from '../../components/sidebar/Sidebar';
@@ -70,6 +72,11 @@ export default function Users() {
 
     return (
         <div className='users-screen'>
+            <div className="create-button-row">
+                <Link to="new-user">
+                    <button className="create-button">Create</button>
+                </Link>
+            </div>
             <DataGrid
                 disableSelectionOnClick
                 rows={data}

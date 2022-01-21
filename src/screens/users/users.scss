@@ -1,6 +1,16 @@
 .users-screen{
     height: 100%;
 
+        .create-button{
+            margin: 20px;
+            border: none;
+            padding-inline: 20px;
+            padding-block: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            
+        }
+
     .user-name-with-image{
         display: flex;
         align-items: center;
